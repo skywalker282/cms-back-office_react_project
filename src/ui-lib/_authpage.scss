@@ -1,0 +1,100 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px auto;
+  height: 86vh;
+  overflow-y: scroll;
+  h2 {
+    font-family: "aileron-bold";
+    color: $front;
+    margin: 25px auto 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i {
+      margin: 15px auto 0;
+      font-size: 35px;
+      color: $primary;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px $glass;
+    margin: 20px auto 30px;
+    input {
+      margin-right: 0;
+    }
+    label {
+      font-size: 18px;
+      font-family: "aileron-thin";
+      color: $primary;
+    }
+    input {
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+      &[required] {
+        width: 250px;
+        border: 1px solid $glass;
+        padding: 5px;
+        border-radius: 3px;
+      }
+    }
+    p {
+      margin: 15px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &:last-child {
+        text-align: right;
+        input {
+          border: none;
+          padding: 10px 20px;
+          border-radius: 3px;
+          font-family: "aileron-thin";
+          box-shadow: 0px 0px 5px $front;
+          cursor: pointer;
+          &:hover {
+            transition: color 0.3s;
+            color: $light;
+            background-color: $front;
+          }
+        }
+      }
+    }
+  }
+  .page-notif {
+    padding: 15px auto;
+    width: 60%;
+    border-top: 2px solid $front;
+    .content {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "aileron-bold";
+      color: $primary;
+      font-size: 20px;
+      i {
+        margin: 0 10px;
+        font-size: 25px;
+      }
+    }
+  }
+  .footer {
+    margin: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $front;
+    font-family: "aileron-thin";
+    font-size: 20px;
+  }
+}

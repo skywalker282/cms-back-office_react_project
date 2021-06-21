@@ -1,0 +1,93 @@
+
+{
+
+    "text": {
+        "chatCallText": "Vous avez un projet et vous voulez m'atteindre à toute urgence? Ne cherchez pas trop loin; ma manager reste constament en ligne pour répondre à toutes vos préoccupations et cela instantanement.Renseignez-vous donc au près de ma manager pour trouver satisfaction à toutes vos préoccupations!",
+        "currentYear": 2021,
+        "hero": {
+            "herointro": "&LT; POUR LE DEVELOPPEMENT DE VOS APPLICATIONS WEB-MOBILE ET VOS LOGICIELS, ON EST ENSEMBLE &GT;"
+        },
+        "aboutIntro": "<strong>Crispin Cirhuza Zagabe</strong> je suis un jeune developpeur basé dans la capitale Kinshasa de la République Démocratique du Congo. J'aime bien le travail et surtout l'innovation technologique et mon travail c'est de conduire à la réussite la transformation digitale de vos entreprises et de vos business en vous proposant des solutions digitales(applications web, mobile et desktop et tant d'autres technologie(chatbots, bot etc).",
+        "cirriculumText": "J'ai surêment un long parcours que chercher à vous le réciter serait un tentative incertaine et peu réaliste. Je vous propose donc de télécharger carrément mon cv et le lire au moment qui vous conviendra!"
+        
+    },
+
+    "images": {
+        "hero": {
+            "imgSrc": "img/HERO.jpg"
+        },
+        "about": {
+            "aboutImgSrc": "img/download (6).jpeg"
+        }
+    },
+
+    "projects": {
+        "text": {
+            "projectIntro": "Ici vous pouvez trouver les projets sur lesquels je travaille et aussi ceux que j'ai déjà réalisés. N'hésitez pas à ouvrir les liens GitHub pour guetter le code!",
+            "callText": "Ces projets n'ont rien de différent de celui que vous avez en tête ou dans vos dossiers en entreprise ou chez vous, et surtout mon ardent désir c'est de me mettre à votre service afin vous béneficiez aussi de la qualité et l'efficacité de mes services !"
+        },
+        "project-cards": [
+            {
+                "title": "Expert Advisor",
+                "img-src": "img/download (4).jpeg",
+                "description": "Here is some more information about this product that is only revealed once clicked on."
+            },
+            {
+                "title": "Expert Advisor",
+                "img-src": "img/download (4).jpeg",
+                "description": "Here is some more information about this product that is only revealed once clicked on."
+            },
+            {
+                "title": "Expert Advisor",
+                "img-src": "img/download (4).jpeg",
+                "description": "Here is some more information about this product that is only revealed once clicked on."
+            }
+        ]
+    },
+
+    "competences": {
+        "text": {
+            "competenceIntro": "Grâce à diverses formations, je suis parvenu à acquérir des compétences diverse dans plusieurs domaines tant technique que transversale!. En voici donc une liste exhaustive",
+            "callText": "Vous avez besoin de réussir la transformation digitale de votre business? Bien, gâce à ces compétences que je détiens; soyez sûr que c'est toujours possible que vos chiffres de l'années soient alors bon, plus que vous!"
+        },
+        "competence-cards": [
+            {
+                "first-icon-title": "service",
+                "title": "Software Architect",
+                "description": "Lorem error autem deleniti ratione, maxime facilis iste. Quae atque hic, aperiam inventore illo soluta dolores voluptates officiis ea reprehenderit nisi.",
+                "last-icon-title": "call"
+            },
+            {
+                "first-icon-title": "service",
+                "title": "Software Architect",
+                "description": "Lorem error autem deleniti ratione, maxime facilis iste. Quae atque hic, aperiam inventore illo soluta dolores voluptates officiis ea reprehenderit nisi.",
+                "last-icon-title": "call"
+            },
+            {
+                "first-icon-title": "service",
+                "title": "Software Architect",
+                "description": "Lorem error autem deleniti ratione, maxime facilis iste. Quae atque hic, aperiam inventore illo soluta dolores voluptates officiis ea reprehenderit nisi.",
+                "last-icon-title": "call"
+            }
+        ]
+    },
+    "service": {
+        "service-cards": [
+            {
+                "iconName": "museum",
+                "title": "Bot de Trading <br>(Expert Advisor)",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quas odio ducimus praesentium, libero veritatis similique, ad eius non architecto commodi sed dignissimos molestias eaque vel blanditiis."
+            },
+            {
+                "iconName": "museum",
+                "title": "Bot de Trading <br>(Expert Advisor)",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quas odio ducimus praesentium, libero veritatis similique, ad eius non architecto commodi sed dignissimos molestias eaque vel blanditiis."
+            },
+            {
+                "iconName": "museum",
+                "title": "Bot de Trading <br>(Expert Advisor)",
+                "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quas odio ducimus praesentium, libero veritatis similique, ad eius non architecto commodi sed dignissimos molestias eaque vel blanditiis."
+            }
+        ]
+    }
+}

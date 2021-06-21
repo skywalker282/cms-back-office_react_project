@@ -1,0 +1,229 @@
+@import "./ui-lib/config";
+@import "./ui-lib/utilities";
+@import "./ui-lib/settingsmenu";
+@import "./ui-lib/connexion";
+@import "./ui-lib/authpage";
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    .app-menu {
+      width: 20vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      &__media {
+        height: 30%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__menu {
+        width: 100%;
+        height: 50vh;
+        overflow-y: scroll;
+        .menu-action {
+          width: 100%;
+          height: 50px;
+          border-bottom: 1px solid $light-glass;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          font-size: 20px;
+          align-items: center;
+          transition: 0.5s all;
+          cursor: pointer;
+          i {
+            color: $front;
+            margin-right: 15px;
+          }
+          &:first-child {
+            justify-content: space-between;
+            border-top: 1px solid $light-glass;
+          }
+          &:hover {
+            background-color: $front-light;
+            color: $primary;
+          }
+        }
+        .display {
+          background-color: $front-light;
+          li {
+            width: 100%;
+            height: 50px;
+            font-family: "aileron-bold";
+            border-top: 1px solid $light-glass;
+            border-right: 1px solid $light-glass;
+            display: flex;
+            font-family: "aileron-thin";
+            font-size: 18px;
+            align-items: center;
+            padding: 0 15px;
+            align-items: center;
+            transition: 0.5s all;
+            cursor: pointer;
+            i {
+              color: $light;
+              margin-right: 15px;
+            }
+            &:hover {
+              background-color: $light;
+              color: $front;
+              i {
+                color: $front-light;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-logo {
+      position: absolute;
+      bottom: 15px;
+      left: 25%;
+      font-family: "aileron-black";
+      color: $light;
+      background: $front;
+      border: 2px solid $primary;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-shadow: 0 0 15px $light;
+      &:hover {
+        display: flex;
+        ::after {
+          content: "Full Stack software engineer";
+          font-family: "aileron-bold";
+          color: $light;
+        }
+      }
+    }
+  }
+  .container {
+    width: 100vw;
+    height: 92.6vh;
+    position: fixed;
+    bottom: 0;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    .appbar {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+      i,
+      h3 {
+        cursor: pointer;
+      }
+      h3 {
+        font-family: "aileron-black";
+      }
+    }
+    &__body {
+      display: flex;
+      justify-content: center;
+      padding: 25px 25px;
+      flex-wrap: wrap;
+      height: 86vh;
+      overflow-y: scroll;
+      .card {
+        width: 45%;
+        padding: 15px;
+        margin: 15px !important;
+        border-radius: 5px;
+        height: min-content;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 0px 5px $glass;
+        &-media {
+          width: 30%;
+        }
+        &-content {
+          flex-grow: 1;
+          display: flex;
+          justify-content: space-between;
+          .card {
+            &-body {
+              li {
+                color: $front;
+                line-height: 30px;
+              }
+            }
+            &-action {
+              li {
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 2px;
+                margin: 5px auto;
+                text-align: center;
+                font-size: 14px;
+                color: $primary;
+                box-shadow: 0px 0px 5px $glass;
+                transition: 0.3s color;
+                &:hover {
+                  background: $primary;
+                  color: $light;
+                }
+                &:nth-child(2) {
+                  color: $front;
+                  &:hover {
+                    background: $front;
+                    color: $light;
+                  }
+                }
+                &:nth-child(3) {
+                  color: $danger;
+                  &:hover {
+                    background: $danger;
+                    color: $light;
+                  }
+                }
+              }
+            }
+          }
+          ul {
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .footer-logo {
+      font-family: "aileron-black";
+      color: $light;
+      background: $front;
+      border: 2px solid $primary;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-shadow: 0 0 15px $light;
+      &:hover {
+        display: flex;
+        ::after {
+          content: "Full Stack software engineer";
+          font-family: "aileron-bold";
+          color: $light;
+        }
+      }
+    }
+  }
+}

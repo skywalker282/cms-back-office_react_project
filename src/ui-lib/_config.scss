@@ -1,0 +1,80 @@
+$front-light: rgba(7, 91, 127, 0.7);
+$primary-light: rgba(11, 19, 32, 0.7);
+$front: #075b7f;
+$light-glass: rgba(194, 188, 188, 0.212);
+$light-light: rgba(255, 255, 255, 0.7);
+$primary: #0b1320;
+$primary-glass: rgba(11, 19, 32, 0.3);
+$front-glass: rgba(7, 91, 127, 0.3);
+$danger: #800000;
+$light: #fff;
+$glass: #808080;
+
+@font-face {
+  font-family: "aileron-black";
+  src: url("../fonts/Aileron-Black.otf");
+}
+@font-face {
+  font-family: "aileron-thin";
+  src: url("../fonts/Aileron-Thin.otf");
+}
+@font-face {
+  font-family: "aileron-bold";
+  src: url("../fonts/Aileron-Bold.otf");
+}
+@font-face {
+  font-family: "aileron-reg";
+  src: url("../fonts/Aileron-Regular.otf");
+}
+@font-face {
+  font-family: "aileron-bitalic";
+  src: url("../fonts/Aileron-BoldItalic.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "aileron-bold";
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  z-index: 3000;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+  box-shadow: inset 0 0 5px $primary;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $front;
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "aileron-reg";
+}
+
+@function colorize($bgColor) {
+  @if (lightness($bgColor) < 50) {
+    @return $light;
+  } @else {
+    @return $primary;
+  }
+}
+
+@mixin backgroundize($color) {
+  background-color: $color;
+  color: colorize($color);
+}

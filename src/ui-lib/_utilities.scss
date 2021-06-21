@@ -1,0 +1,46 @@
+.bg {
+  &-primary {
+    @include backgroundize($primary);
+  }
+  &-primary-light {
+    @include backgroundize($primary-light);
+  }
+  &-front {
+    @include backgroundize($front);
+  }
+  &-front-light {
+    @include backgroundize($front-light);
+  }
+  &-light {
+    @include backgroundize($light);
+  }
+  &-light-glass {
+    @include backgroundize($light-glass);
+  }
+  &-danger {
+    @include backgroundize($danger);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  &-circle {
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: center;
+  }
+  &-large {
+    padding: 15px;
+  }
+  &-float-rb {
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+  }
+}
+.dismiss {
+  display: none;
+}
+.display {
+  display: block;
+}
