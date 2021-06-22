@@ -5,6 +5,7 @@
   .page-header {
     height: 70px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     box-shadow: 0px 0px 5px $glass;
@@ -16,6 +17,17 @@
       color: $front;
       @media screen and (max-width: 700px) {
         font-size: 20px;
+      }
+    }
+    p {
+      font-size: 20px;
+      font-family: "aileron-thin";
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      color: $front;
+      i {
+        margin-right: 15px;
       }
     }
   }

@@ -9,12 +9,15 @@ const App = (props) => {
   let [authContext, setAuthContext] = useState({
     authVisible: false,
     userStatus: "",
+    check: "",
   });
   let [contentContext, setContentContext] = useState("project");
   let [logIn, setLogIn] = useState({
     isUserLoggedIn: false,
     userCredentials: {},
   });
+
+  let [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
   const handleDisconnect = () => {
     setLogIn({
@@ -55,7 +58,6 @@ const App = (props) => {
   };
 
   const setMenuContext = (context) => {
-    console.log(context);
     setSideMenuContext(context);
   };
 
@@ -72,6 +74,8 @@ const App = (props) => {
               setSideMenuContext={setMenuContext}
               contentContext={contentContext}
               handleDisconnect={handleDisconnect}
+              isUserAuthenticated={isUserAuthenticated}
+              setIsUserAuthenticated={setIsUserAuthenticated}
             />
           );
         }

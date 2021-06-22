@@ -5,6 +5,7 @@ const ConnexionPage = props => {
             <div className="connexion-page bg-light-light">
                 <header className="page-header">
                     <h2>PORFOLIO DATA MANAGEMENT PAGE</h2>
+                    <p><i className="material-icons">help</i> Besoin d'aide ?</p>
                 </header>
                 <p className="page-say">
                     Let's build great and higher well designed software to solve

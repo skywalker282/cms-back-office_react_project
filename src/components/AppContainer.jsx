@@ -8,6 +8,25 @@ const AppContainer = props => {
 
     let [addItemContext, setAddItemContext] = useState(false);
 
+    const handleAddProject = event => {
+        event.preventDefault();
+        let formElementTable = event.target.elements;
+
+        let formData={};
+
+        formElementTable = Array.from(formElementTable).map(element=>{
+            if (element.name !== "") {
+                formData[element.name] = element.value;
+            };
+        });
+        setAddItemContext(false);
+        props.setConfirmContext({
+            visible: true,
+            purpose: "add_project",
+            data: formData
+        })
+    }
+
     return (
         <div className="container bg-light">
             <AppBar 
@@ -21,9 +40,16 @@ const AppContainer = props => {
             {
                 (context => {
                     if (context) {
-                        return <AuthenticationPage authContext={props.authContext}/>
+                        return <AuthenticationPage 
+                            setAuthContext = {props.setAuthContext}
+                            authContext={props.authContext}
+                            isUserAuthenticated={props.isUserAuthenticated}
+                            setConfirmContext={props.setConfirmContext}
+                            setIsUserAuthenticated={props.setIsUserAuthenticated}
+                            setAddItemContext={setAddItemContext} />
                         
-                    } else {return (
+                    } else {
+                        return (
                         <>
                             <div className="container__body">
                                 {
@@ -33,13 +59,14 @@ const AppContainer = props => {
                                             authContext={props.authContext}
                                             setContent={props.setContent} 
                                             project={projectObject}
-                                            deleteContext = {props.deleteContext}
+                                            confirmContext = {props.confirmContext}
                                             deleteProject = {props.deleteProject}
-                                            dismissDeleteModal = {props.dismissDeleteModal} />;
+                                            dismissDeleteModal = {props.dismissDeleteModal} 
+                                            addProject={props.addProject}/>;
                                     })
                                 }
                             </div>
-                            <i className="material-icons btn btn-large btn-circle btn-float-rb bg-front" onClick={() => { setAddItemContext(true)}}>add</i>
+                            <i className="material-icons btn btn-large btn-circle btn-float-rb bg-front" onClick={() => {props.setAuthContext({authVisible: true, userStatus: "utilisateur", check: "add_project"}) }}>add</i>
                             {
                                 (context => {
                                     if (context) {
@@ -48,18 +75,14 @@ const AppContainer = props => {
                                                 <div className="add-modal bg-primary" onClick={event => {event.stopPropagation()}}>
                                                 <h2>AJOUT D'UN PROJET</h2>
                                                 <div className="form">
-                                                    <form>
-                                                        <p>
-                                                            <label htmlFor="title">Titre</label>
-                                                            <input type="text" name="project_title" id="title"/>
-                                                        </p>
+                                                    <form onSubmit={handleAddProject}>
                                                         <p>
                                                             <label htmlFor="title">Titre</label>
                                                             <input type="text" name="project_title" id="title"/>
                                                         </p>
                                                         <p>
                                                             <label htmlFor="title">Description</label>
-                                                            <textarea name="text_description" id="project_description" cols="30" rows="10"></textarea>
+                                                            <textarea name="project_description" id="project_description" cols="30" rows="10"></textarea>
                                                         </p>
                                                         <p>
                                                             <label htmlFor="project_link">Lien du projet</label>
@@ -67,7 +90,7 @@ const AppContainer = props => {
                                                         </p>
                                                         <p>
                                                             <label htmlFor="project_image">Image</label>
-                                                            <input type="file" name="project_image" id="project_image"/>
+                                                            <input type="file" name="project_image_link" id="project_image"/>
                                                             <label className="bg-front file" htmlFor="project_image">Choisir une image</label>
                                                         </p>
                                                         <p>

@@ -145,16 +145,26 @@
         height: min-content;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         box-shadow: 0px 0px 5px $glass;
+        @media screen and (max-width: 650px) {
+          width: 80%;
+        }
         &-media {
           width: 30%;
-          height: 50%;
+          height: 80%;
           margin: 10px;
+          @media screen and (max-width: 1020px) {
+            width: 100%;
+          }
         }
         &-content {
-          flex-grow: 1;
           display: flex;
           justify-content: space-between;
+          width: 65%;
+          @media screen and (max-width: 1020px) {
+            width: 100%;
+          }
           .card {
             &-body {
               li {
