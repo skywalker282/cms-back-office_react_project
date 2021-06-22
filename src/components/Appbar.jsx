@@ -17,8 +17,7 @@ const AppBar = props => {
         setSettingsMenuContext(false);
     }
 
-    const onDisplayMenu = event => {
-        event.stopPropagation();
+    const onDisplayMenu = () => {
         props.setAuthContext({authVisible: false});
         props.setContext(true);
     }
@@ -30,7 +29,7 @@ const AppBar = props => {
     return (
         <>
             <div className="appbar bg-front">
-                <i className="material-icons appbar-menu" onClick={onDisplayMenu}>menu</i>
+                <i className="material-icons appbar-menu" onClick={(event) => { event.stopPropagation(); onDisplayMenu(); props.setContent('projects')}}>menu</i>
                 <h3 className="appbar-title">{props.title}</h3>
                 <i className="material-icons appbar-action" onClick={()=> { showSettings()}}>settings</i>
             </div>

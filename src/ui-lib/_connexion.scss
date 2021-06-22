@@ -14,39 +14,40 @@
       margin-left: 15px;
       font-family: "aileron-black";
       color: $front;
+      @media screen and (max-width: 700px) {
+        font-size: 20px;
+      }
     }
   }
   .page-say {
+    width: 100%;
     text-align: center;
     margin: 20px 250px;
     font-family: "aileron-thin";
     font-size: 24px;
+    q {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 700px) {
+      font-size: 20px;
+    }
   }
   .page-body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    .hero {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url("../images/programmingillustrate.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      h3 {
-        color: $light;
-        font-family: "aileron-black";
-        text-shadow: 0px 0px 5px $front;
-      }
-    }
     .content {
       width: 50%;
+      @media screen and (max-width: 700px) {
+        width: 95%;
+      }
       .connexion-form {
         width: 100%;
         padding: 15px;
         padding-right: 50px;
+        @media screen and (max-width: 700px) {
+          font-size: 20px;
+        }
         p {
           margin: 10px auto;
           width: 100%;
@@ -63,9 +64,8 @@
             }
           }
           &:last-child {
-            text-align: right;
+            text-align: center;
             .form-submit {
-              display: inline;
               text-align: center;
               font-size: 14px;
               margin-top: 30px;

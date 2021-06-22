@@ -1,15 +1,14 @@
 import MainPage from "./components/MainPage";
 import ConnexionPage from "./components/ConnexionPage";
 import "./App.scss";
+import "sweetalert2/dist/sweetalert2.css";
 import { useState } from "react";
 
 const App = (props) => {
   let [sideMenuContext, setSideMenuContext] = useState(false);
   let [authContext, setAuthContext] = useState({
     authVisible: false,
-    userStatus: {
-      name: "",
-    },
+    userStatus: "",
   });
   let [contentContext, setContentContext] = useState("project");
   let [logIn, setLogIn] = useState({

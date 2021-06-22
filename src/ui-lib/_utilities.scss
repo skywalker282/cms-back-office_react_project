@@ -44,3 +44,135 @@
 .display {
   display: block;
 }
+
+.delete-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $front-glass;
+  .delete-confirm {
+    width: auto;
+    padding: 30px;
+    border-radius: 5px;
+    h5 {
+      font-family: "aileron-bold";
+      .subject {
+        color: $danger;
+      }
+    }
+    p {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+      span {
+        padding: 5px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.notif {
+  position: fixed;
+  bottom: 75px;
+  left: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  padding: 5px 15px;
+  border-radius: 3px;
+  span {
+    margin: 0 10px;
+    font-family: "aileron-thin";
+    &:last-child {
+      padding: 1px 10px;
+      border-radius: 1px;
+      cursor: pointer;
+    }
+  }
+}
+
+.add-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $front-glass;
+  .add-modal {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    h2 {
+      text-align: center;
+      color: $front;
+      margin: 15px auto;
+      font-family: "aileron-bold";
+    }
+    .form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      form {
+        width: 60%;
+        p {
+          width: 100%;
+          margin: 10px auto;
+          display: flex;
+          justify-content: space-between;
+          input,
+          textarea {
+            width: 70%;
+          }
+          button {
+            width: 70%;
+            border: none;
+            padding: 8px;
+            border-radius: 3px;
+          }
+          input {
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            &[type="file"] {
+              display: none;
+            }
+          }
+          .file {
+            display: block;
+            width: 70%;
+            padding: 5px;
+            border-radius: 3px;
+            text-align: center;
+            cursor: pointer;
+          }
+          textarea {
+            height: 50px;
+            border: none;
+            border-radius: 3px;
+          }
+          &:last-child {
+            display: flex;
+            justify-content: flex-end;
+            margin: 25px 0;
+            input {
+              width: auto;
+              padding: 10px 20px;
+              box-shadow: 0px 0px 5px $front;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

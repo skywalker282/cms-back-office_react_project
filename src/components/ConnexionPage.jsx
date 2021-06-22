@@ -6,15 +6,12 @@ const ConnexionPage = props => {
                 <header className="page-header">
                     <h2>PORFOLIO DATA MANAGEMENT PAGE</h2>
                 </header>
-                <q className="page-say">
+                <p className="page-say">
                     Let's build great and higher well designed software to solve
-                    your problems together
-                    La plus grande liberté dans la plus stricte tolérance
-                </q>
+                    your problems together <br/>
+                    <q>The greatest freedom in most tight permissivness</q>
+                </p>
                 <div className="page-body">
-                    <section className="hero">
-                        <h3>SEND DATA DYNAMICALLY AND WEBSITE UPDATE AUTOMATICALLY</h3>
-                    </section>
                     <section className="content">
                         <form className="connexion-form" onSubmit={props.handleConnect}>
                         <p>
